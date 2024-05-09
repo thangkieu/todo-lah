@@ -1,11 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
+
+import "./components/requestNotification";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
+        <p
+          role="button"
+          onClick={() => {
+            console.log("send notification");
+            const options = {
+              body: "Hello There! Body",
+              icon: "/icon512_rounded.png",
+            };
+
+            new Notification("Hey there!", options);
+          }}
+        >
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
