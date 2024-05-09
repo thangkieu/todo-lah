@@ -6,14 +6,14 @@ if (typeof window !== "undefined") {
       randomNotification();
     }
   });
+}
 
-  function randomNotification() {
-    const options = {
-      body: "Hello There! Body",
-      icon: "/icon512_rounded.png",
-    };
+function randomNotification() {
+  const options = {
+    body: "Hello There! Body",
+    icon: "/icon512_rounded.png",
+  };
 
-    new Notification("Hey there!", options);
-    setTimeout(randomNotification, 30000);
-  }
+  new Notification("Hey there!", options);
+  setTimeout(randomNotification, 30000);
 }
